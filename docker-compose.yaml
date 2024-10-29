@@ -1,0 +1,30 @@
+version: '3.0'
+
+services:
+  backend:
+    image: backend-img
+    build:
+      context: ./backend  # Aapke Django backend ka folder path
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/app  # Backend ke code ko container ke andar mount karega
+    ports:
+      - "9000:9000"  # Container ka port 8000 ko host ka port 8000 se map karega
+    environment:
+      - PYTHONUNBUFFERED=1  # Logs ko real-time mein dekhne ke liye
+
+  frontend:
+    image: frontend-img
+    build:
+      context: ./frontend  # Aapke React frontend ka folder path
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/app  # Frontend ke code ko container ke andar mount karega
+    ports:
+      - "3000:3000"  # Container ka port 3000 ko host ka port 3000 se map karega
+    depends_on:
+      - backend  # Frontend ko backend se pehle start hona chahiye
+
+networks:
+  default:
+    driver: bridge
