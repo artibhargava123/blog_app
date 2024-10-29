@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Playfair+Display:wght@700&display=swap');
+
+// Creating CSS Variables
+$main-bg: #ffffff;
+$soft-bg: #eef0f2;
+$dark-bg: #dadee1;
+
+$main-color: #414141;
+$soft-color: #b1b1b1;
+$dark-color: #1b1f24;
+
+$green: #0fb400;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* Home.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.Home {
+  max-width: 1200px; /* Maximum width for the main container */
+  margin: 0 auto; /* Centering the container */
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; /* Centering navbar items */
+  background-color: #007bff;
+  color: white;
+  padding: 15px 0;
+  margin-bottom: 20px; /* Adding space below the navbar */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px; /* Spacing between navbar links */
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  margin: 20px 0;
+}
+
+.posts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px; /* Space between posts */
+}
+
+.post {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.post:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.post h3 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.post p {
+  color: #555;
+}
+
+.post-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination-numbers {
+  display: inline-block;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.active {
+  background-color: #0056b3;
+}

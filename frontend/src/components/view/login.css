@@ -1,0 +1,74 @@
+/* login.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .login {
+    max-width: 400px; /* Maximum width for the login form */
+    margin: 50px auto; /* Centering the form */
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .login p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px; /* Space below the paragraph */
+  }
+  
+  .login label {
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold;
+  }
+  
+  .login input {
+    width: 100%; /* Full width inputs */
+    padding: 10px;
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn-container {
+    text-align: center; /* Center the button */
+  }
+  
+  .btn-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-container button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .login span {
+    display: block; /* Block display for better alignment */
+    text-align: center; /* Center the text */
+    margin-top: 15px; /* Space above the span */
+  }
+  
+  .login a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .login a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }

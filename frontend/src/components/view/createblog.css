@@ -1,0 +1,84 @@
+/* CreateBlog.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .blog {
+    max-width: 600px; /* Maximum width for the blog form */
+    margin: 50px auto; /* Centering the form with margin */
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .blog p {
+    text-align: center;
+    color: #666;
+  }
+  
+  label {
+    display: block;
+    margin: 15px 0 5px; /* Spacing for labels */
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  textarea,
+  input[type="file"] {
+    width: 100%; /* Full width for inputs */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px; /* Spacing below inputs */
+    font-size: 1rem;
+  }
+  
+  input[type="file"] {
+    padding: 3px; /* Adjust padding for file input */
+  }
+  
+  .btn-container {
+    text-align: center; /* Center the button */
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .error {
+    color: red;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .success {
+    color: green;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  span {
+    display: block;
+    text-align: center;
+    margin-top: 20px; /* Space above the link */
+  }

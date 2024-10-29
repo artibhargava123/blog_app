@@ -1,0 +1,70 @@
+/* Comment.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .comments {
+    max-width: 600px; /* Maximum width for the comments section */
+    margin: 50px auto; /* Centering the comments section */
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .comments h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .comments .error {
+    color: red;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .comments .success {
+    color: green;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .comments form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+  }
+  
+  .comments label {
+    margin-bottom: 5px; /* Space between label and textarea */
+    font-weight: bold;
+  }
+  
+  .comments textarea {
+    resize: none; /* Disable resizing */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px; /* Space below textarea */
+  }
+  
+  .btn-container {
+    text-align: center; /* Center the button */
+  }
+  
+  .btn-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-container button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
