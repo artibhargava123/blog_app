@@ -4,7 +4,7 @@ import axios from 'axios';
 import './view/blogpost.css';
 
 const BlogPostDetail = () => {
-  const base_url=process.env.REACT_APP_BASE_URL
+  const base_url=process.env.REACT_APP_BASE_URL;
   const { id } = useParams(); 
   const [blogPost, setBlogPost] = useState(null); 
   const [error, setError] = useState(null); 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './view/passwordreset.css';
 const PasswordReset = () => {
-    const base_url=process.env.REACT_APP_BASE_URL
+    const base_url=process.env.REACT_APP_BASE_URL;
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [loading, setLoading] = useState(false);

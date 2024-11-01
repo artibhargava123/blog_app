@@ -5,7 +5,7 @@ import './view/passwordresetconfirm.css';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const PasswordResetConfirm = () => {
-    const base_url=process.env.REACT_APP_BASE_URL
+    const base_url=process.env.REACT_APP_BASE_URL;
     const { uid, token } = useParams(); // Retrieve uid and token from URL parameters
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
