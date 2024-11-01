@@ -5,6 +5,7 @@ import './view/passwordresetconfirm.css';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const PasswordResetConfirm = () => {
+    const base_url=process.env.REACT_APP_BASE_URL
     const { uid, token } = useParams(); // Retrieve uid and token from URL parameters
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -24,7 +25,7 @@ const PasswordResetConfirm = () => {
         }
 
         try {
-            const response = await axios.post(`http://127.0.0.1:8000/api/password_reset_confirm/${uid}/${token}/`, {
+            const response = await axios.post(`${base_url}password_reset_confirm/${uid}/${token}/`, {
                 password,
             }, {
                 headers: {

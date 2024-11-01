@@ -3,6 +3,7 @@ import { createContext, useState, useEffect } from "react";
 import {jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
 const swal = require('sweetalert2');
+const base_url=process.env.REACT_APP_BASE_URL
 
 const AuthContext = createContext();
 
@@ -23,7 +24,7 @@ export const AuthProvider = ({ children }) => {
     const navigate = useNavigate();
 
     const loginUser = async (email, password) => {
-        let url = "http://127.0.0.1:8000/api/token/";
+        let url =base_url+ "token/";
         const response = await fetch(url, {
             method: "POST",
             headers: {
@@ -61,7 +62,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     const registerUser = async (full_name, email, username, password, password2) => {
-        let url = "http://127.0.0.1:8000/api/register/";
+        let url = base_url+"register/";
         const response = await fetch(url, {
             method: "POST",
             headers: {
@@ -112,7 +113,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     const createblog = async (title, content, image) => {
-        let url = "http://127.0.0.1:8000/api/blog/";
+        let url = base_url+"blog/";
         const formData = new FormData();
         formData.append('title', title);
         formData.append('content', content);
@@ -155,7 +156,7 @@ export const AuthProvider = ({ children }) => {
 
 
     const createComment = async (blog_post, content) => {
-        let url = `http://127.0.0.1:8000/api/comments/`;
+        let url = base_url+`comments/`;
         const commentData = { blog_post, content}; 
         const response = await fetch(url, {
             method: "POST",

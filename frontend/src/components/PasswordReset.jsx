@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './view/passwordreset.css';
 const PasswordReset = () => {
+    const base_url=process.env.REACT_APP_BASE_URL
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [loading, setLoading] = useState(false);
@@ -12,7 +13,7 @@ const PasswordReset = () => {
         setLoading(true); 
 
         try {
-            const response = await axios.post('http://127.0.0.1:8000/api/password_reset/', { email }, {
+            const response = await axios.post(`${base_url}password_reset/`, { email }, {
                 headers: {
                     'Content-Type': 'application/json',
                 }

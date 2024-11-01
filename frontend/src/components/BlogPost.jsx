@@ -4,6 +4,7 @@ import axios from 'axios';
 import './view/blogpost.css';
 
 const BlogPostDetail = () => {
+  const base_url=process.env.REACT_APP_BASE_URL
   const { id } = useParams(); 
   const [blogPost, setBlogPost] = useState(null); 
   const [error, setError] = useState(null); 
@@ -17,7 +18,7 @@ const BlogPostDetail = () => {
   // Function to fetch the blog post
   const fetchBlogPost = async () => {
     try {
-      const response = await axios.get(`http://127.0.0.1:8000/api/blog-posts/${id}/`, {
+      const response = await axios.get(`${base_url}blog-posts/${id}/`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("authTokens") 
             ? JSON.parse(localStorage.getItem("authTokens")).access
@@ -40,7 +41,7 @@ const BlogPostDetail = () => {
   const handleDelete = async () => {
     if (window.confirm('Are you sure you want to delete this blog post?')) {
       try {
-        await axios.delete(`http://127.0.0.1:8000/api/blog-posts/${id}/delete/`, {
+        await axios.delete(`${base_url}blog-posts/${id}/delete/`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("authTokens") 
               ? JSON.parse(localStorage.getItem("authTokens")).access
@@ -78,7 +79,7 @@ const BlogPostDetail = () => {
         formData.append('image', updatedPost.image);
       }
 
-      await axios.put(`http://127.0.0.1:8000/api/blog-posts/${id}/update/`, formData, {
+      await axios.put(`${base_url}blog-posts/${id}/update/`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${localStorage.getItem("authTokens") 
@@ -108,7 +109,7 @@ const BlogPostDetail = () => {
   const handleCommentSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`http://127.0.0.1:8000/api/blog-posts/${id}/comments/`, {
+      await axios.post(`${base_url}blog-posts/${id}/comments/`, {
         blog_post:Number(id),
         content: newComment,
       }, {
