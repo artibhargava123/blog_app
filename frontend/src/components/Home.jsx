@@ -7,6 +7,8 @@ import { jwtDecode } from 'jwt-decode';
 
 const Home = () => {
   const navigate = useNavigate();
+  const base_url=process.env.REACT_APP_BASE_URL;
+
   const { user, logoutUser } = useContext(AuthContext);
 
   const token = localStorage.getItem("authTokens")
@@ -28,7 +30,7 @@ const Home = () => {
 
   const fetchPosts = async (page) => {
     try {
-      const response = await axios.get(`http://127.0.0.1:8000/api/blog/?user_id=${userId}&page=${page}`, {
+      const response = await axios.get(`${base_url}blog/?user_id=${userId}&page=${page}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -53,7 +55,7 @@ const Home = () => {
   
   const fetchComments = async (postId) => {
     try {
-      const response = await axios.get(`http://127.0.0.1:8000/api/comments/?blog-post=${postId}`, {
+      const response = await axios.get(`${base_url}comments/?blog-post=${postId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
