@@ -9,7 +9,7 @@ services:
     volumes:
       - ./backend:/app  # Backend ke code ko container ke andar mount karega
     ports:
-      - "9000:9000"  # Container ka port 8000 ko host ka port 8000 se map karega
+      - "8028:9000"  # Container ka port 8000 ko host ka port 8000 se map karega
     environment:
       - PYTHONUNBUFFERED=1  # Logs ko real-time mein dekhne ke liye
 
@@ -21,7 +21,7 @@ services:
     volumes:
       - ./frontend:/app  # Frontend ke code ko container ke andar mount karega
     ports:
-      - "3000:3000"  # Container ka port 3000 ko host ka port 3000 se map karega
+      - "5028:3000"  # Container ka port 3000 ko host ka port 3000 se map karega
     depends_on:
       - backend  # Frontend ko backend se pehle start hona chahiye
 
