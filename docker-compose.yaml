@@ -9,7 +9,7 @@ services:
     volumes:
       - ./backend:/app  # Backend ke code ko container ke andar mount karega
     ports:
-      - "8028:9000"  # Container ka port 8000 ko host ka port 8000 se map karega
+      - "8030:9000"  # Container ka port 8000 ko host ka port 8000 se map karega
     environment:
       - PYTHONUNBUFFERED=1  # Logs ko real-time mein dekhne ke liye
 
